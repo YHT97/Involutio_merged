@@ -1,0 +1,62 @@
+@import "../global";
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    &--heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: $white-primary;
+        border-radius: 20px;
+        border: 2px solid #EFEFEF;
+        background: rgba(217, 217, 217, 0.20);
+        backdrop-filter: blur(27.5px);
+        cursor: pointer;
+        &__up {
+            width: 0;
+            height: 0;
+            margin-left: 8px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid $white-primary;
+        }
+        &__down {
+            width: 0;
+            height: 0;
+            margin-left: 8px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid $white-primary;
+        }
+    }
+    &--list {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        padding: 8px 0;
+        margin-top: 1px;
+        list-style: none;
+        z-index: 10;
+        border-radius: 20px;
+        border: 2px solid #EFEFEF;
+        background: rgba(217, 217, 217, 0.20);
+        backdrop-filter: blur(27.5px);
+        &__item {
+            padding: 10px;
+            font-size: 18px;
+            color: $white-primary;
+            cursor: pointer;
+            transition: 150ms ease-in;
+            &:hover {
+                background-color: $white-secondary;
+            }
+        }
+    }
+}

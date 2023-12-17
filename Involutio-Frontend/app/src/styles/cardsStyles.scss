@@ -1,0 +1,48 @@
+@import "../global";
+
+.line-card {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    padding: 10px;
+    height: 60px;
+    border-radius: 20px;
+    border: 2px solid #EFEFEF;
+    background: rgba(217, 217, 217, 0.20);
+    backdrop-filter: blur(27.5px);
+    &--info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: center;
+        &__name,
+        &__second-column,
+        &__third-column,
+        &__probability {
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__details {
+        justify-self: end;
+        border-radius: 15px;
+        border: 1px solid $white-primary;
+        color: $white-primary;
+        cursor: pointer;
+        background: rgba(217, 217, 217, 0.10);
+        backdrop-filter: blur(27.5px);
+        padding: 8px 20px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 2.4px;
+        transition: 250ms ease;
+        &:hover {
+            box-shadow: 0 0 5px 0 $white-primary;
+        }
+    }
+}
